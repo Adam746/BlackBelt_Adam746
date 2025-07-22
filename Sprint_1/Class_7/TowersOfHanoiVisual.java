@@ -1,5 +1,5 @@
 public class TowersOfHanoiVisual {
-    private static final int NUM_DISKS = 4;
+    private static final int NUM_DISKS = 3;
     private static String[][] towers; // Visual representation of towers
 
     public static void main(String[] args) {
@@ -21,13 +21,13 @@ public class TowersOfHanoiVisual {
     private static void printTowers() {
         for (int i = 0; i < NUM_DISKS; i++) {
             for (int j = 0; j < 3; j++) {
-                if (!towers[i][j].equals("   |   ")) {
-                    System.out.print(" ");
+                if (towers[i][j].equals("   |   ")) {
                     System.out.print(towers[i][j]);
-                    System.out.print(" ");
                 }
                 else {
+                    System.out.print(" ");
                     System.out.print(towers[i][j]);
+                    System.out.print(" ");
                 }
             }
             System.out.println();
