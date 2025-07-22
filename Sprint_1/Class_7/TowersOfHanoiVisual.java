@@ -14,21 +14,14 @@ public class TowersOfHanoiVisual {
             for (int j = 0; j < 3; j++) {
                 towers[i][j] = "   |   "; // Initial state with all disks on the first rod
             }
-            towers[i][0] = String.format(" %d%d%d ", i+1, i+1, i+1); // Populate the first tower with disks
+            towers[i][0] = String.format("  %d%d%d  ", i+1, i+1, i+1); // Populate the first tower with disks
         }
     }
 
     private static void printTowers() {
         for (int i = 0; i < NUM_DISKS; i++) {
             for (int j = 0; j < 3; j++) {
-                if (towers[i][j].equals("   |   ")) {
-                    System.out.print(towers[i][j]);
-                }
-                else {
-                    System.out.print(" ");
-                    System.out.print(towers[i][j]);
-                    System.out.print(" ");
-                }
+                System.out.print(towers[i][j]);
             }
             System.out.println();
         }
